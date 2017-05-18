@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>版型</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        /*CSS RESET*/
+        
+        * {
+            box-sizing: border-box;
+            /*内距、邊框不計入寬度*/
+            font-family: "Open Sans";
+        }
+        
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        ul,
+        ol,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            border: 0;
+            /*IE預設邊框2px*/
+            width: 100%;
+            vertical-align: top;
+            /*避免圖片對齊基線導致圖片下方產生4px的空隙*/
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /*CSS RESET END*/
+        
+        .full-width {
+            width: 100%;
+        }
+        
+        .fixed-width {
+            width: 1000px;
+            margin: auto;
+        }
+        
+        .col-1,
+        .col-2,
+        .col-3,
+        .col-4 {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .col-2,
+        .col-3,
+        .col-4 {
+            float: left;
+        }
+        
+        .col-1 {
+            width: 960px;
+        }
+        
+        .col-2 {
+            width: 460px;
+        }
+        
+        .col-3 {
+            width: calc(1000px/3 - 40px);
+            /*減 中間要空一格才有效*/
+        }
+        
+        .col-4 {
+            width: 210px;
+        }
+        
+        nav {
+            height: 50px;
+            background-color: #333;
+        }
+        
+        nav .logo {
+            width: 120px;
+            height: 50px;
+            background-color: gold;
+            float: left;
+        }
+        
+        nav .menu {
+            float: right;
+        }
+        
+        nav .menu li {
+            list-style: none;
+            float: left;
+        }
+        
+        nav .menu a {
+            display: block;
+            color: gold;
+            text-decoration: none;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 50px;
+        }
+        nav .menu a:hover {
+            background-color: gold;
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            padding: 6px 20px;
+            /*按鈕的寬度建議使用 padding 設定*/
+            text-decoration: none;
+            background-color: #333;
+            color: gold;
+        }
+        .btn:hover {
+            background-color: chocolate;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+        }
+        
+        header {
+            padding-top: 300px;
+            padding-bottom: 300px;
+            background-image: url(img/header.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        header h1 {
+            text-align: center;
+            color: #000;
+            font-size: 48px;
+        }
+        
+        #about,
+        #portfolio,
+        #service {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        
+        #about {
+            background-color: gold;
+        }
+        
+        #portfolio {
+            background-color: #333;
+        }
+        
+        #portfolio .title {
+            color: gold;
+        }
+        #portfolio .fixed-width:nth-of-type(1) {
+            margin-bottom: 30px;
+        }
+        
+        #service {
+            background-color: gold;
+            text-align: center;
+        }
+        
+        #service p {
+            margin: 30px 0;
+            line-height: 1.5em;
+        }
+        footer {
+            background-color: #333;
+            color: gold;
+            padding: 10px 0px;
+        }
+        footer .copyrights {
+            padding-top: 5px;
+        }
+        footer .social {
+            text-align: right;
+        }
+        footer a {
+            color: gold;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        footer a:hover {
+            color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="full-width">
+        <div class="fixed-width">
+            <div class="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="full-width">
+        <h1>MARU'S LIFE</h1>
+    </header>
+    <div class="full-width" id="about">
+        <h2 class="title">ABOUT</h2>
+        <div class="fixed-width clearfix">
+            <div class="col-2">
+                <img src="img/01.jpg" alt="">
+            </div>
+            <div class="col-2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ad minus natus dignissimos repellat molestiae, veritatis consectetur maxime optio nam deserunt voluptas quia ab temporibus perferendis sequi, illum iste impedit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore saepe culpa voluptatem pariatur quae. Blanditiis, nemo dolore, quod cum ut a, cumque explicabo optio qui fugit ullam eligendi ipsa laudantium.</p>
+                <a href="#" class="btn">MORE</a>
+            </div>
+        </div>
+    </div>
+    <div class="full-width" id="portfolio">
+        <div class="fixed-width clearfix">
+            <h2 class="title">PORFOLIO</h2>
+            <div class="col-3">
+                <img src="img/02.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="img/03.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="img/04.jpg" alt="">
+            </div>
+        </div>
+        <div class="fixed-width clearfix">
+            <div class="col-3">
+                <img src="img/05.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="img/06.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="img/07.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="full-width" id="service">
+        <div class="fixed-width clearfix">
+            <h2 class="title">SERVICE</h2>
+            <div class="col-4">
+                <div><i class="fa fa-bomb fa-5x"></i></div>
+                <!--icon: font awesome-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusantium reprehenderit molestiae, dolores eaque id aspernatur rem dolore.</p>
+                <a href="#" class="btn">MORE</a>
+            </div>
+            <div class="col-4">
+                <div><i class="fa fa-legal fa-5x"></i></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusantium reprehenderit molestiae, dolores eaque id aspernatur rem dolore.</p>
+                <a href="#" class="btn">MORE</a>
+            </div>
+            <div class="col-4">
+                <div><i class="fa fa-heartbeat fa-5x"></i></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusantium reprehenderit molestiae, dolores eaque id aspernatur rem dolore.</p>
+                <a href="#" class="btn">MORE</a>
+            </div>
+            <div class="col-4">
+                <div><i class="fa fa-thumbs-up fa-5x"></i></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusantium reprehenderit molestiae, dolores eaque id aspernatur rem dolore.</p>
+                <a href="#" class="btn">MORE</a>
+            </div>
+        </div>
+    </div>
+    <footer class="full-width">
+        <div class="fixed-width clearfix">
+            <div class="col-2">
+                <div class="copyrights">
+                    2017 &copy; All Rights Reserved. Design by Ruby
+                </div>
+            </div>
+            <div class="col-2">
+               <div class="social">
+                <a href="#" class="fa fa-facebook fa-2x"></a>
+                <a href="#" class="fa fa-instagram fa-2x"></a>
+                <a href="#" class="fa fa-envelope fa-2x"></a>
+                <a href="#" class="fa fa-twitter fa-2x"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
