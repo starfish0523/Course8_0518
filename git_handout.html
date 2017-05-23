@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Git 版本控制</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+        header {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+            padding: 30px;
+        }
+        header a {
+            display: block;
+            width: 100px;
+            padding: 10px;
+            margin: auto;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            background-color: black;
+        }
+        .step1 {
+            width: 500px;
+            background-color: antiquewhite;
+            margin: auto;
+            padding: 30px;
+        }
+        
+        .step2 {
+            width: 500px;
+            background-color: #e8b879;
+            margin: auto;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Git 版本控制</h1>
+        <p>date: 2017/05/18</p>
+        <a href="https://www.git-scm.com/" target="_blank">Download Git</a>
+    </header>
+    <div class="step2">
+        <h2>資料夾初始化，開始進行git版本控制</h2>
+        <p>cmd》git init</p>
+    </div>
+    <div class="step1">
+        <h2>版本控制─本機</h2>
+        <ol>
+            <li>cmd》git add .</li>
+            <p>//上傳到暫存區(staging area)</p>
+            <li>cmd》git commit -m "version X"</li>
+            <p>//上傳到本機資料庫 (repository)</p>
+        </ol>
+
+    </div>
+    <div class="step2">
+        <h2>版本控制─遠端</h2>
+        <ol>
+            <li>到Github.com上複製遠端儲存庫網址</li>
+            <p></p>
+            <li>cmd》git remote add origin http://~.git</li>
+            <p>//連結本機資料庫和遠端資料庫(資料庫名稱設一樣的)</p>
+            <li>cmd》git push origin master</li>
+            <p>//把本機資料庫的檔案上傳到遠端資料庫</p>
+        </ol>
+    </div>
+    <div class="step1">
+        <h2>把遠端資料庫下載到本機</h2>
+        <ol>
+            <li>在Github.com上複製遠端儲存庫網址(clone)</li>
+            <p></p>
+            <li>cmd》git clone "http://~.git"</li>
+            <p>//把遠端檔案下載到本機</p>
+        </ol>
+    </div>
+</body>
+
+</html>

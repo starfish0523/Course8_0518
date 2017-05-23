@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- viewport: 裝置和網頁顯示一致-->
+    <!-- user-scalable:手指縮放功能-->
+    <title>自適應</title>
+    <style>
+        @media screen and (max-width:500px) {
+            body {
+                background-color: #333;
+            }
+            h1 {
+                font-size: 100px;
+                color: aliceblue;
+            }
+        }
+        
+        @media screen and (max-width:1000px) and (min-width:500px) {
+            body {
+                background-color: #aa1cbc;
+            }
+            h1 {
+                font-size: 80px;
+            }
+        }
+        
+        @media screen and (min-width: 1000px) {
+            body {
+                background-color: azure;
+            }
+            h1 {
+                font-size: 50px;
+            }
+        }
+        /*如果螢幕視窗為直立，就套用這些css設定*/
+        /*螢幕視窗橫向說法: orientation:landscape*/
+        
+        @media screen and (orientation: portrait) {
+            body {
+                background-color: cadetblue;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>asdfg</h1>
+</body>
+
+</html>
